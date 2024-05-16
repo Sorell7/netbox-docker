@@ -2,7 +2,7 @@ version: '3.4'
 services:
   netbox:
     ports:
-    - 8000:8000
+    - 8090:8090
     volumes:
     - /volume1/docker/netbox:/etc/netbox/config:/mnt/DADOS/netbox,ro
     - netbox-media-files:/opt/netbox/netbox/media:/mnt/DADOS/netbox,rw
