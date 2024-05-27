@@ -1,24 +1,6 @@
-version: '3.4'
 services:
   netbox:
     ports:
     - 8090:8090
-    volumes:
-    - /volume1/docker/netbox:/etc/netbox/config:/mnt/DADOS/netbox,ro
-    - netbox-media-files:/opt/netbox/netbox/media:/mnt/DADOS/netbox,rw
-    - netbox-reports-files:/opt/netbox/netbox/reports:/mnt/DADOS/netbox,rw
-    - netbox-scripts-files:/opt/netbox/netbox/scripts:/mnt/DADOS/netbox,rw
-    healthcheck:
-      retries: 3
   netbox-worker:
     volumes:
-    - /volume1/docker/netbox:/etc/netbox/config:/mnt/DADOS/netbox,ro
-    - netbox-media-files:/opt/netbox/netbox/media:/mnt/DADOS/netbox,rw
-    - netbox-reports-files:/opt/netbox/netbox/reports:/mnt/DADOS/netbox,rw
-    - netbox-scripts-files:/opt/netbox/netbox/scripts:/mnt/DADOS/netbox,rw
-  netbox-housekeeping:
-    volumes:
-    - /volume1/docker/netbox:/etc/netbox/config:/mnt/DADOS/netbox,ro
-    - netbox-media-files:/opt/netbox/netbox/media:/mnt/DADOS/netbox,rw
-    - netbox-reports-files:/opt/netbox/netbox/reports:/mnt/DADOS/netbox,rw
-    - netbox-scripts-files:/opt/netbox/netbox/scripts:/mnt/DADOS/netbox,rw
